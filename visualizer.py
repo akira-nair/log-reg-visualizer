@@ -56,6 +56,9 @@ def plot_binary_probability_space(binary_model: argparse.Namespace, resolution: 
     plt.pcolormesh(X1, X2, Z, cmap='cool', vmin=0, vmax=1, shading='auto')
     plt.colorbar()
 
+    plt.xlabel('x1')
+    plt.ylabel('x2')
+
     # plot line of separation
     plt.contour(X1, X2, Z, levels=[0.5], colors='white')
     model_eq = f"{binary_model.weights[0]}x_1 + {binary_model.weights[1]}x_2 + {binary_model.weights[2]}"
